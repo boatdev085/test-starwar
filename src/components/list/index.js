@@ -6,7 +6,7 @@ const ListItem = (props) => {
   const { item, favoriteList, setFavoriteList } = props
   const haveFavorite = favoriteList?.includes(item?.name)
   const handleAddFavorite = (name) => {
-    const newFavorite = [...favoriteList, item?.name]
+    const newFavorite = [...favoriteList, name]
     setFavoriteList(newFavorite)
     localStorage.setItem('favorite', newFavorite)
   }
